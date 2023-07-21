@@ -3,7 +3,7 @@
 <img align="right" src="https://i.ibb.co/LN0f3tb/Mision-TIC-UIS.png" width="25%" />
 
 
-####En estes espacio se encuentran dispuestos los diferentes recursos de interacción y construcción colaborativa que se emplearon para desarrollar cada uno de los sprint programados en este proyecto como entrega final del programa académico liderado por el Gobierno Nacional desde el ministerio de las TIC con alianza de la Universidad Industrial de Santander.
+En este espacio se encuentra dispuesto los diferentes recursos de interacción y construcción colaborativa que se emplearon para desarrollar cada uno de los sprint programados en este proyecto, como entrega final del programa académico MisionTic2022 liderado por el Gobierno Nacional desde el ministerio de las TIC con alianza de la Universidad Industrial de Santander.
 
 De acuerdo a la metodología seleccionada (SCRUM), se tuvo en  cuenta el desarrollo del proyecto mediante la entrega de un total de 4 Sprints o iteraciones:
 
