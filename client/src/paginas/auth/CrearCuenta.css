@@ -1,0 +1,38 @@
+.card-login-width {
+  width: 300px;
+}
+
+.login-container {
+  width: 100%;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.login-logo a {
+  text-decoration: none;
+}
+.img-fluid-container {
+  display: grid;
+  place-items: center;
+}
+
+.img-fluid {
+  width: 50%;
+  height: auto;
+}
+
+.log-box {
+  padding: 8%;
+  height: 85vh;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .log-box {
+    height: auto;
+  }
+}

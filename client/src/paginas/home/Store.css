@@ -1,0 +1,81 @@
+/* Section Products */
+
+.text-center-home {
+    width: 100%;
+    display: flex;
+    font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.object-product {
+    height: 150px;
+    width: 100%;
+}
+
+.text-center-home h1 {
+    position: absolute;
+    text-transform: uppercase;
+    color: #dcdfef;
+    font-weight: 800;
+    font-size: 4rem;
+    margin-top: 8%;
+    left: 25%;
+    font-weight: 600;
+    font-size: 28px;    
+    filter: drop-shadow(rgba(10, 10, 10, 0.952) 0px 10px 15px);
+}
+
+.container-section {
+    margin-top: 50px;
+}
+
+.card { 
+  -webkit-box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 50%);
+}
+
+.card-title-home {
+    margin-bottom: 0.5rem;
+}
+.ver {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.rebajado {
+    text-decoration: line-through;
+    color: #dcdfef;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  
+
+.card-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  float: right;
+  color: #050505;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.full {
+    font-weight: holder;
+    color: #0353a4;
+}
+
+.card-subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    text-align: center;
+}
+
+.row-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

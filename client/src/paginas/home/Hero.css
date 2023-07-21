@@ -1,0 +1,75 @@
+/* article */
+
+.banner-hero {
+    position: relative;
+    font-size: 0;
+}
+.banner-hero video {
+    transition: opacity 500ms;
+    opacity: 0.4;
+}
+
+.banner-hero .box-banner-title {
+    position: absolute;
+    z-index: 0;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    z-index: 2;
+}
+.banner-hero .box-banner-title .title1 {
+    font-weight: 200px;
+    font-size: 42px;
+    width: 100%;
+}
+.banner-hero p {
+    color: rgb(169, 30, 153);
+    text-align: center;
+    width: 100px;
+    font-weight:Bold;
+    font-size: 13px;
+}
+.banner-hero .box-banner-title .descrp1 {
+    font-size: 57px;
+    width: 650px;
+    color: rgb(10, 10, 10);
+}
+.banner-hero .bounce {
+    position: absolute;
+    z-index: 0;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.banner-hero .bounce p {
+    font-size: 18px;
+    color: rgb(10, 10, 10);
+} 
+.banner-hero a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner-hero .arrow {
+    text-align: center;
+    margin: 0 0;
+    width: 40px;
+}
+
+.banner-hero .fa img {
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(rgb(3, 3, 3) 0px 10px 15px);
+}
