@@ -9,10 +9,13 @@ De acuerdo a la metodología seleccionada (SCRUM), se tuvo en  cuenta el desarro
 
 
 
-Se construyo la aplicación web en la nube, utilizando una base de datos no relacional en MongoDB con sus diagrama de las colecciones respectivas, desarrollando el front con JavaScript y su librería React, ademas de instalar y configurar el template adminLte, y diseñando los mock-up de cada una de las interfaces de usuario a implementar desde draw.io; el back se construyó desde un conjunto de componentes	independientes que	expone	APIsREST, que se despliegan de manera individual y que se comunican entre sí haciendo invocaciones a la API que exponen (arquitectura de microservicios), usando Postman para realizar las pruebas necesarias.
+Se construyo la aplicación web en la nube, utilizando una base de datos no relacional en MongoDB con sus diagrama de las colecciones respectivas, desarrollando el front con JavaScript y su librería React, ademas de instalar y configurar el template adminLte, y diseñando los mock-up de cada una de las interfaces de usuario a implementar desde draw.io; el back se construyó desde un conjunto de componentes	independientes que	expone	APIsREST, que se despliegan de manera individual y que se comunican entre sí haciendo invocaciones a la API (arquitectura de microservicios), así mismo se uso Postman para realizar las pruebas necesarias.
 
 En el diseño de la aplicación, se implementó la habilidad de leer e interpretar artefactos como la	arquitectura de	software,	la	especificación	de	las	APIs,	los	diagramas	de	despliegue,	el	plan de implementación, entre otros; y se emplearon las siguientes tecnologías:
 
+
+
+## Algunas de las herramientas  para gestionar el desarrollo del proyecto fueron ⚙: 
 
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -22,11 +25,11 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 
-## Algunas de las herramientas  para gestionar el desarrollo del proyecto fueron ⚙: 
 
+## Conoce un poco más de este proyecto en los siguientes enlaces 💼: 
 - <a href="https://midulceonline.netlify.app/">Website </a> ✍🏾
 - <a href="https://lizbethgrisalescastro.atlassian.net/jira/software/projects/U2910/boards/2/backlog">Jira   </a> 📹 
--  <a href="https://youtube.com/watch?v=0VIMADyCCNQ">Pitch Youtube</a> 💼
+-  <a href="https://youtube.com/watch?v=0VIMADyCCNQ">Pitch Youtube</a> 
 ---
 
 
