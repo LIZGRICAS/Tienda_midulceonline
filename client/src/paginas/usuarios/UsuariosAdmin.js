@@ -4,14 +4,13 @@ import ContentHeader from '../../componentes/ContentHeader';
 import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 const UsuariosAdmin = () => {
   
     const [proyectos, setProyectos] = useState([]);
 
-    const cargarProyectos = async () => {
-        const response = await APIInvoke.invokeGET(`/api/proyectos`);
+    const cargarProyectos = async (e) => {
+        const response = await e
         //console.log(response.proyectos);
         setProyectos(response.proyectos);
     }
@@ -22,7 +21,7 @@ const UsuariosAdmin = () => {
 
     const eliminarProyecto = async (e, idProyecto) => {
         e.preventDefault();
-        const response = await APIInvoke.invokeDELETE(`/api/proyectos/${idProyecto}`);
+        const response = await e
 
         if (response.msg === 'Proyecto eliminado') {
             const msg = "El producto fue borrado correctamente.";

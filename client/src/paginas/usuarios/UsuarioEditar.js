@@ -4,7 +4,6 @@ import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
 import { useNavigate, useParams } from 'react-router-dom';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 
 const ProyectosEditar = () => {

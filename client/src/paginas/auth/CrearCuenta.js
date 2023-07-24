@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import APIInvoke from "../../utils/APIInvoke";
 import swal from "sweetalert";
 import "./CrearCuenta.css";
 
@@ -64,7 +63,7 @@ const CrearCuenta = () => {
         email: usuario.email,
         password: usuario.password,
       };
-      const response = await APIInvoke.invokePOST(`/api/usuarios`, data);
+      const response = data;
       const mensaje = response.msg;
 
       if (mensaje === "El usuario ya existe") {

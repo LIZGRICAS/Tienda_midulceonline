@@ -4,7 +4,6 @@ import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
 import { useNavigate, useParams } from 'react-router-dom';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 
 const ProyectosEditar = () => {
@@ -40,7 +39,7 @@ const ProyectosEditar = () => {
             nombre: proyecto.nombre
         }
 
-        const response = await APIInvoke.invokePUT(`/api/proyectos/${idProyecto}`, data);
+        const response = await data;
         const idProyectoEditado = response.proyecto._id;
 
         if (idProyectoEditado !== idProyecto) {

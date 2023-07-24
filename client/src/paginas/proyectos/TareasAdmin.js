@@ -4,7 +4,6 @@ import ContentHeader from '../../componentes/ContentHeader';
 import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 
 const TareasAdmin = () => {
@@ -17,9 +16,8 @@ const TareasAdmin = () => {
     const nombreProyecto = arreglo[1];
     const tituloPagina = `Listado de Tareas: ${nombreProyecto}`;
 
-    const cargarTareas = async () => {
-        const response = await APIInvoke.invokeGET(`/api/tareas?proyecto=${idProyecto}`);
-        //console.log(response.tareas);
+    const cargarTareas = async (e) => {
+        const response = await e
         setTareas(response.tareas);
     }
 
@@ -29,7 +27,7 @@ const TareasAdmin = () => {
 
     const eliminarTarea = async (e, idTarea, idProyecto) => {
         e.preventDefault();
-        const response = await APIInvoke.invokeDELETE(`/api/tareas/${idTarea}?proyecto=${idProyecto}`);
+        const response = await idProyecto
 
         if (response.msg === 'Tarea eliminada') {
             const msg = "La tares fue borrada correctamente.";

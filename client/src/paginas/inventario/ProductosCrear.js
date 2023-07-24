@@ -4,38 +4,102 @@ import Footer from "../../componentes/Footer";
 import Navbar from "../../componentes/Navbar";
 import SidebarContainer from "../../componentes/SidebarContainer";
 import { useNavigate } from "react-router-dom";
-import APIInvoke from "../../utils/APIInvoke";
 import swal from "sweetalert";
+import { productosApi } from "../../apis/productosApi";
 
 const ProductosCrear = () => {
   const navigate = useNavigate();
 
-  const [proyecto, setProyecto] = useState({
+  const [producto, setProducto] = useState({
     nombre: "",
+    codigo: "",
+    categoria: "",
+    imagen: "",
+    unidadMedida: "",
+    descripcion: "",
+    valorCompra: "",
+    valorVenta: "",
+    sinRebaja: "",
+    cantidad: "",
+    calificacion: "",
+    proveedor: "",
   });
 
-  const { nombre } = proyecto;
+  const {
+    nombre,
+    codigo,
+    categoria,
+    imagen,
+    unidadMedida,
+    descripcion,
+    valorCompra,
+    valorVenta,
+    sinRebaja,
+    cantidad,
+    calificacion,
+    proveedor,
+  } = producto;
 
+  console.log(producto);
   useEffect(() => {
-    document.getElementById("nombre").focus();
+    document.getElementById("imagen").focus();
   }, []);
 
   const onChange = (e) => {
-    setProyecto({
-      ...proyecto,
+    console.log(e);
+    setProducto({
+      ...producto,
       [e.target.name]: e.target.value,
     });
   };
 
-  const crearProyecto = async () => {
-    const data = {
-      nombre: proyecto.nombre,
-    };
+  console.log(
+    producto.nombre,
+    producto.codigo,
+    producto.categoria,
+    producto.imagen,
+    producto.unidadMedida,
+    producto.descripcion,
+    producto.valorCompra,
+    producto.valorVenta,
+    producto.sinRebaja,
+    producto.cantidad,
+    producto.calificacion,
+    producto.proveedor
+  );
 
-    const response = await APIInvoke.invokePOST(`/api/proyectos`, data);
-    const idProyecto = response._id;
+  const crearProducto = async () => {
+console.log(producto.nombre,
+  producto.codigo,
+  producto.categoria,
+  producto.imagen,
+  producto.unidadMedida,
+  producto.descripcion,
+  producto.valorCompra,
+  producto.valorVenta,
+  producto.sinRebaja,
+  producto.cantidad,
+  producto.calificacion,
+  producto.proveedor)
 
-    if (idProyecto === "") {
+    const response = await productosApi.createProduct(
+      producto.nombre,
+      producto.codigo,
+      producto.categoria,
+      producto.imagen,
+      producto.unidadMedida,
+      producto.descripcion,
+      producto.valorCompra,
+      producto.valorVenta,
+      producto.sinRebaja,
+      producto.cantidad,
+      producto.calificacion,
+      producto.proveedor
+    );
+    console.log(response);
+    const idProducto = response._id;
+
+    if (idProducto === "") {
       const msg = "El producto no fue creado correctamente.";
       swal({
         title: "Error",
@@ -52,7 +116,7 @@ const ProductosCrear = () => {
         },
       });
     } else {
-      navigate("/proyectos-admin");
+      navigate("/inventario");
       const msg = "El producto fue creado correctamente.";
       swal({
         title: "Información",
@@ -69,15 +133,26 @@ const ProductosCrear = () => {
         },
       });
 
-      setProyecto({
+      setProducto({
         nombre: "",
+        codigo: "",
+        categoria: "",
+        imagen: "",
+        unidadMedida: "",
+        descripcion: "",
+        valorCompra: "",
+        valorVenta: "",
+        sinRebaja: "",
+        cantidad: "",
+        calificacion: "",
+        proveedor: "",
       });
     }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    crearProyecto();
+    crearProducto();
   };
 
   return (
@@ -89,7 +164,7 @@ const ProductosCrear = () => {
           titulo={"Creación de Productos"}
           breadCrumb1={"Listado de Productos"}
           breadCrumb2={"Creación"}
-          ruta1={"/proyectos-admin"}
+          ruta1={"/inventario"}
         />
 
         <section className="content">
@@ -120,12 +195,12 @@ const ProductosCrear = () => {
                   <div className="form-group">
                     <label htmlFor="nombre">Url imagen</label>
                     <input
-                      type="url"
+                      type="text"
                       className="form-control"
-                      id="nombre"
-                      name="url"
+                      id="imagen"
+                      name="imagen"
                       placeholder="Ingrese la url de la imagen del producto"
-                      value={nombre}
+                      value={imagen}
                       onChange={onChange}
                       required
                     />
@@ -133,14 +208,14 @@ const ProductosCrear = () => {
                 </div>
                 <div className="card-body">
                   <div className="form-group">
-                    <label htmlFor="nombre">Nombre</label>
+                    <label htmlFor="nombre">Nombre (único)</label>
                     <input
                       type="text"
                       className="form-control"
                       id="nombre"
                       name="nombre"
-                      placeholder="Ingrese el nombre del producto"
                       value={nombre}
+                      placeholder="Ingrese el nombre del producto"
                       onChange={onChange}
                       required
                     />
@@ -148,15 +223,15 @@ const ProductosCrear = () => {
                 </div>
                 <div className="card-body">
                   <div className="form-group">
-                    <label htmlFor="nombre">Código</label>
+                    <label htmlFor="nombre">Código (único)</label>
                     <input
                       type="number"
                       className="form-control"
                       id="codigo"
                       name="codigo"
                       placeholder="Ingrese el código del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={codigo}
                       required
                     />
                   </div>
@@ -164,24 +239,32 @@ const ProductosCrear = () => {
                 <div className="card-body">
                   <div className="form-group">
                     <label htmlFor="nombre">Categoría</label>
-                    <select id="categoria" name="categoria" className="form-control" placeholder="Elige una opción" required>
-                      <option value="colombina">Caramelos</option>
-                      <option value="montBlanc">Chocolates</option>
-                      <option value="nestle">Galletas</option>
+                    <select
+                      id="categoria"
+                      name="categoria"
+                      className="custom-select"
+                      onChange={onChange}
+                      value={categoria}
+                      required
+                    >
+                      <option selected>Elige...</option>
+                      <option value="Caramelos">Caramelos</option>
+                      <option value="Chocolates">Chocolates</option>
+                      <option value="Galletas">Galletas</option>
                     </select>
                   </div>
                 </div>
                 <div className="card-body">
                   <div className="form-group">
-                    <label htmlFor="nombre">Unidad de medida</label>
+                    <label htmlFor="unidadMedidas">Unidad de medida</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
                       id="unidadMedida"
                       name="unidadMedida"
                       placeholder="Ingrese la unidad de medida"
-                      value={nombre}
                       onChange={onChange}
+                      value={unidadMedida}
                       required
                     />
                   </div>
@@ -195,8 +278,8 @@ const ProductosCrear = () => {
                       id="descripcion"
                       name="descripcion"
                       placeholder="Ingrese la descripción del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={descripcion}
                       required
                     />
                   </div>
@@ -210,8 +293,8 @@ const ProductosCrear = () => {
                       id="valorCompra"
                       name="valorCompra"
                       placeholder="Ingrese el valor de compra del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={valorCompra}
                       required
                     />
                   </div>
@@ -225,8 +308,8 @@ const ProductosCrear = () => {
                       id="valorVenta"
                       name="valorVenta"
                       placeholder="Ingrese el valor de venta del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={valorVenta}
                       required
                     />
                   </div>
@@ -240,8 +323,8 @@ const ProductosCrear = () => {
                       id="sinRebaja"
                       name="sinRebaja"
                       placeholder="Ingrese el valor de precio sinRebaja del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={sinRebaja}
                       required
                     />
                   </div>
@@ -255,37 +338,74 @@ const ProductosCrear = () => {
                       id="cantidad"
                       name="cantidad"
                       placeholder="Ingrese la cantidad del producto"
-                      value={nombre}
                       onChange={onChange}
+                      value={cantidad}
                       required
                     />
                   </div>
                 </div>
                 <div className="card-body">
-                <div className="form-group ">
+                  <div className="form-group ">
                     <label htmlFor="nombre">Calificación</label>
-                    <p id="calificacion" className="clasificacion form-group-star">
-                    <input id="radio1" type="radio" name="estrellas" value="5" />
-                    <label htmlFor="radio1">★</label>
-                    <input id="radio2" type="radio" name="estrellas" value="4" />
-                    <label htmlFor="radio2">★</label>
-                    <input id="radio3" type="radio" name="estrellas" value="3" />
-                    <label htmlFor="radio3">★</label>
-                    <input id="radio4" type="radio" name="estrellas" value="2" />
-                    <label htmlFor="radio4">★</label>
-                    <input id="radio5" type="radio" name="estrellas" value="1" />
-                    <label htmlFor="radio5">★</label>
+                    <p
+                      id="calificacion"
+                      className="clasificacion form-group-star"
+                      value={calificacion}
+                      onChange={onChange}
+                    >
+                      <input
+                        id="radio1"
+                        type="radio"
+                        name="calificacion"
+                        value={5}
+                      />
+                      <label htmlFor="radio1">★</label>
+                      <input
+                        id="radio2"
+                        type="radio"
+                        name="calificacion"
+                        value={4}
+                      />
+                      <label htmlFor="radio2">★</label>
+                      <input
+                        id="radio3"
+                        type="radio"
+                        name="calificacion"
+                        value={3}
+                      />
+                      <label htmlFor="radio3">★</label>
+                      <input
+                        id="radio4"
+                        type="radio"
+                        name="calificacion"
+                        value={2}
+                      />
+                      <label htmlFor="radio4">★</label>
+                      <input
+                        id="radio5"
+                        type="radio"
+                        name="calificacion"
+                        value={1}
+                      />
+                      <label htmlFor="radio5">★</label>
                     </p>
                   </div>
-                  
                 </div>
                 <div className="card-body">
                   <div className="form-group">
                     <label htmlFor="nombre">Proveedor </label>
-                    <select id="proveedor" name="proveedor" className="form-control" required > 
-                      <option value="colombina">Colombina </option>
-                      <option value="montBlanc">Mont Blanc</option>
-                      <option value="nestle">Nestle</option>
+                    <select
+                      id="proveedor"
+                      name="proveedor"
+                      className="custom-select"
+                      value={proveedor}
+                      onChange={onChange}
+                      required
+                    >
+                      <option selected>Elige...</option>
+                      <option value="Colombina">Colombina </option>
+                      <option value="Mont Blanc">Mont Blanc</option>
+                      <option value="Nestle">Nestle</option>
                     </select>
                   </div>
                 </div>

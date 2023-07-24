@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import APIInvoke from "../../utils/APIInvoke";
 import swal from "sweetalert";
 import Footer from "../../componentes/Footer";
 
 const Login = () => {
   //para redireccionar de un componente a otro
   const navigate = useNavigate();
+  //usuario de prueba
+  const user = "correo@dulce.com";
+  const clave = "dulce123";
 
   //definimos el estado inicial de las variables
   const [usuario, setUsuario] = useState({
@@ -24,7 +26,21 @@ const Login = () => {
   };
 
   useEffect(() => {
-    document.getElementById("email").focus();
+    const msg = "utiliza el email: correo@dulce.com  y la clave: dulce123 para ingresar al modulo de administrador.";
+      swal({
+        title: "¡Datos de prueba!",
+        text: msg,
+        icon: "success",
+        buttons: {
+          confirm: {
+            text: "Ok",
+            value: true,
+            visible: true,
+            className: "btn btn-primary",
+            closeModal: true,
+          },
+        },
+      });
   }, []);
 
   const iniciarSesion = async () => {
@@ -45,21 +61,14 @@ const Login = () => {
         },
       });
     } else {
-      const data = {
-        email: usuario.email,
-        password: usuario.password,
-      };
-      const response = await APIInvoke.invokePOST(`/api/auth`, data);
-      const mensaje = response.msg;
 
       if (
-        mensaje === "El usuario no existe" ||
-        mensaje === "Contraseña incorrecta"
+        usuario.email !== user || usuario.password !== clave
       ) {
         const msg =
           "No fue posible iniciar la sesión verifique los datos ingresados.";
         swal({
-          title: "Error",
+          title: "¡Datos incorrectos!",
           text: msg,
           icon: "error",
           buttons: {
@@ -73,14 +82,9 @@ const Login = () => {
           },
         });
       } else {
-        //obtenemos el token de acceso jwt
-        const jwt = response.token;
-
-        //guardamos el token en el localstorage
-        localStorage.setItem("token", jwt);
-
-        //redireccionamos al home la pagina principal
-        navigate("/admin");
+        
+        //redireccionamos al admin la pagina principal
+        navigate("/inventario");
       }
     }
   };

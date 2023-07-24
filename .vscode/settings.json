@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/d963e25e-697c-4069-bf1a-b57fbf86cda1/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ApiMiDulceOnline",
+    "appService.deploySubpath": "api"
+}

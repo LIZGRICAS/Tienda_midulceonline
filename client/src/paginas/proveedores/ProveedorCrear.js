@@ -4,39 +4,46 @@ import Footer from "../../componentes/Footer";
 import Navbar from "../../componentes/Navbar";
 import SidebarContainer from "../../componentes/SidebarContainer";
 import { useNavigate } from "react-router-dom";
-import APIInvoke from "../../utils/APIInvoke";
 import swal from "sweetalert";
 
 const ProveedorCrear = () => {
   const navigate = useNavigate();
 
-  const [proyecto, setProyecto] = useState({
+  const [proveedor, setProveedor] = useState({
     nombre: "",
+    numDoc: "",
+    direccion: "",
+    telefono: "",
+    email: "",
   });
 
-  const { nombre } = proyecto;
+  const { nombre, numDoc, direccion, telefono, email } = proveedor;
 
   useEffect(() => {
     document.getElementById("nombre").focus();
   }, []);
 
   const onChange = (e) => {
-    setProyecto({
-      ...proyecto,
+    setProveedor({
+      ...proveedor,
       [e.target.name]: e.target.value,
     });
   };
 
-  const crearProyecto = async () => {
+  const crearProveedor = async () => {
     const data = {
-      nombre: proyecto.nombre,
+      nombre: proveedor.nombre,
+      numDoc: proveedor.numDoc,
+      direccion: proveedor.direccion,
+      telefono: proveedor.telefono,
+      email: proveedor.email,
     };
 
-    const response = await APIInvoke.invokePOST(`/api/proyectos`, data);
+    const response = await data;
     const idProyecto = response._id;
 
     if (idProyecto === "") {
-      const msg = "El producto no fue creado correctamente.";
+      const msg = "El proveedor no fue creado correctamente.";
       swal({
         title: "Error",
         text: msg,
@@ -52,8 +59,8 @@ const ProveedorCrear = () => {
         },
       });
     } else {
-      navigate("/proyectos-admin");
-      const msg = "El producto fue creado correctamente.";
+      navigate("/proveedor-admin");
+      const msg = "El proveedor fue creado correctamente.";
       swal({
         title: "Información",
         text: msg,
@@ -69,7 +76,7 @@ const ProveedorCrear = () => {
         },
       });
 
-      setProyecto({
+      setProveedor({
         nombre: "",
       });
     }
@@ -77,7 +84,7 @@ const ProveedorCrear = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    crearProyecto();
+    crearProveedor();
   };
 
   return (
@@ -89,7 +96,7 @@ const ProveedorCrear = () => {
           titulo={"Creación de Proveedor"}
           breadCrumb1={"Listado de Proveedores"}
           breadCrumb2={"Creación"}
-          ruta1={"/proveedores"}
+          ruta1={"/proveedor-admin"}
         />
 
         <section className="content">
@@ -118,13 +125,13 @@ const ProveedorCrear = () => {
               <form onSubmit={onSubmit}>
                 <div className="card-body">
                   <div className="form-group">
-                    <label htmlFor="nombre">Nombre</label>
+                    <label htmlFor="nombre">Nombre del Proveedor</label>
                     <input
                       type="text"
                       className="form-control"
                       id="nombre"
                       name="nombre"
-                      placeholder="Ingrese el nombre del producto"
+                      placeholder="Ingrese el nombre del proveedor"
                       value={nombre}
                       onChange={onChange}
                       required
@@ -137,10 +144,10 @@ const ProveedorCrear = () => {
                     <input
                       type="number"
                       className="form-control"
-                      id="nombre"
-                      name="nombre"
+                      id="numDoc"
+                      name="numDoc"
                       placeholder="Ingrese el número de documento"
-                      value={nombre}
+                      value={numDoc}
                       onChange={onChange}
                       required
                     />
@@ -152,10 +159,10 @@ const ProveedorCrear = () => {
                     <input
                       type="text"
                       className="form-control"
-                      id="nombre"
-                      name="nombre"
+                      id="direccion"
+                      name="direccion"
                       placeholder="Ingrese la dirección del proveedor"
-                      value={nombre}
+                      value={direccion}
                       onChange={onChange}
                       required
                     />
@@ -167,10 +174,10 @@ const ProveedorCrear = () => {
                     <input
                       type="number"
                       className="form-control"
-                      id="nombre"
-                      name="nombre"
+                      id="telefono"
+                      name="telefono"
                       placeholder="Ingrese el número télefonico"
-                      value={nombre}
+                      value={telefono}
                       onChange={onChange}
                       required
                     />
@@ -182,10 +189,10 @@ const ProveedorCrear = () => {
                     <input
                       type="email"
                       className="form-control"
-                      id="nombre"
-                      name="nombre"
+                      id="email"
+                      name="email"
                       placeholder="Ingrese el email de contacto"
-                      value={nombre}
+                      value={email}
                       onChange={onChange}
                       required
                     />

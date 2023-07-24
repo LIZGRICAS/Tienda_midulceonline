@@ -4,7 +4,6 @@ import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
 import { useNavigate, useParams } from 'react-router-dom';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 
 const ProyectosEditar = () => {
@@ -95,7 +94,7 @@ const ProyectosEditar = () => {
                     titulo={"Edición de Proyectos"}
                     breadCrumb1={"Listado de Proyecto"}
                     breadCrumb2={"Edición"}
-                    ruta1={"/proyectos-admin"}
+                    ruta1={"/proveedor-admin"}
                 />
 
                 <section className="content">
@@ -120,7 +119,7 @@ const ProyectosEditar = () => {
                                             className="form-control"
                                             id="nombre"
                                             name="nombre"
-                                            placeholder="Ingrese el nombre del proyecto"
+                                            placeholder="Ingrese el nombre del proveedor"
                                             value={nombre}
                                             onChange={onChange}
                                             required

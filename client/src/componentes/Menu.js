@@ -22,7 +22,7 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to={"/proveedores"} className="nav-link">
+                    <Link to={"/proveedor-admin"} className="nav-link">
                         <i className="nav-icon fas fa-edit" />
                         <p>
                             Proveedores

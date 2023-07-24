@@ -4,62 +4,62 @@ import ContentHeader from '../../componentes/ContentHeader';
 import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
+import { proveedoresApi } from '../../apis/proveedoresApi';
 const ProveedorAdmin = () => {
+    const [proveedores, setProveedores] = useState([]);
   
-    const [proyectos, setProyectos] = useState([]);
-
-    const cargarProyectos = async () => {
-        const response = await APIInvoke.invokeGET(`/api/proyectos`);
-        //console.log(response.proyectos);
-        setProyectos(response.proyectos);
-    }
-
+    const cargarProveedores = async () => {
+      const response = await proveedoresApi.listProveedores();
+      console.log(response);
+      setProveedores(response);
+    };
+  
     useEffect(() => {
-        cargarProyectos();
-    }, [])
-
-    const eliminarProyecto = async (e, idProyecto) => {
-        e.preventDefault();
-        const response = await APIInvoke.invokeDELETE(`/api/proyectos/${idProyecto}`);
-
-        if (response.msg === 'Proyecto eliminado') {
-            const msg = "El producto fue borrado correctamente.";
-            swal({
-                title: 'Información',
-                text: msg,
-                icon: 'success',
-                buttons: {
-                    confirm: {
-                        text: 'Ok',
-                        value: true,
-                        visible: true,
-                        className: 'btn btn-primary',
-                        closeModal: true
-                    }
-                }
-            });
-            cargarProyectos();
-        } else {
-            const msg = "El producto no fue borrado correctamente.";
-            swal({
-                title: 'Error',
-                text: msg,
-                icon: 'error',
-                buttons: {
-                    confirm: {
-                        text: 'Ok',
-                        value: true,
-                        visible: true,
-                        className: 'btn btn-danger',
-                        closeModal: true
-                    }
-                }
-            });
-        }
-
-    }
+       cargarProveedores();
+    }, []);
+  
+     
+   
+    const eliminarProveedor = async (e, idProveedor) => {
+      e.preventDefault();
+      console.log(idProveedor)
+      const response = await proveedoresApi.deleteProveedor(idProveedor)
+      console.log(response)
+      if (response.status === 200 ) {
+        const msg = "El pro veedor fue borrado correctamente.";
+        swal({
+          title: "Información",
+          text: msg,
+          icon: "success",
+          buttons: {
+            confirm: {
+              text: "Ok",
+              value: true,
+              visible: true,
+              className: "btn btn-primary",
+              closeModal: true,
+            },
+          },
+        });
+      } else {
+        const msg = "El produveedor no fue borrado correctamente.";
+        swal({
+          title: "Error",
+          text: msg,
+          icon: "error",
+          buttons: {
+            confirm: {
+              text: "Ok",
+              value: true,
+              visible: true,
+              className: "btn btn-danger",
+              closeModal: true,
+            },
+          },
+        });
+      }
+    };
 
     return (
         <div className="wrapper">
@@ -70,7 +70,7 @@ const ProveedorAdmin = () => {
                 <ContentHeader
                     titulo={"Listado de Proveedores"}
                     breadCrumb1={"Inicio"}
-                    breadCrumb2={"Productos"}
+                    breadCrumb2={"Proveedores"}
                     ruta1={"/admin"}
                 />
 
@@ -93,7 +93,6 @@ const ProveedorAdmin = () => {
                                 <thead>
                                     <tr>
                                         <th style={{ width: '20%' }}>Nombre</th>
-                                        <th style={{ width: '10%' }}>Tipo de doc.</th>
                                         <th style={{ width: '10%' }}>Número de doc.</th>
                                         <th style={{ width: '10%' }}>Dirección</th>
                                         <th style={{ width: '10%'}}>Télefono</th>
@@ -102,15 +101,17 @@ const ProveedorAdmin = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        proyectos.map(
+                                        proveedores.map(
                                             item =>
                                                 <tr key={item._id}>
-                                                    <td>{item._id}</td>
                                                     <td>{item.nombre}</td>
+                                                    <td>{item.numDoc}</td>
+                                                    <td>{item.direccion}</td>
+                                                    <td>{item.telefono}</td>
+                                                    <td>{item.email}</td>
                                                     <td>
-                                                        <Link to={`/tareas-admin/${item._id}@${item.nombre}`} className="btn btn-sm btn-info">Tareas</Link>&nbsp;&nbsp;
-                                                        <Link to={`/proyectos-editar/${item._id}@${item.nombre}`} className="btn btn-sm btn-primary">Editar</Link>&nbsp;&nbsp;
-                                                        <button onClick={(e) => eliminarProyecto(e, item._id)} className="btn btn-sm btn-danger">Borrar</button>
+                                                        <Link to={`/proveedor-editar/${item._id}@${item.nombre}`} className="btn btn-sm btn-primary">Editar</Link>&nbsp;&nbsp;
+                                                        <button onClick={(e) => eliminarProveedor(e, item._id)} className="btn btn-sm btn-danger">Borrar</button>
                                                     </td>
                                                 </tr>
                                         )

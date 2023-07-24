@@ -4,7 +4,6 @@ import Footer from '../../componentes/Footer';
 import Navbar from '../../componentes/Navbar';
 import SidebarContainer from '../../componentes/SidebarContainer';
 import { useNavigate, useParams } from 'react-router-dom';
-import APIInvoke from '../../utils/APIInvoke'
 import swal from 'sweetalert';
 
 const TareasEditar = () => {
@@ -49,7 +48,7 @@ const TareasEditar = () => {
             estado: false
         }
 
-        const response = await APIInvoke.invokePUT(`/api/tareas/${idTarea}`, data);
+        const response = await data
         const idTareaEditado = response.tarea._id;
 
         if (idTareaEditado !== idTarea) {

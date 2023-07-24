@@ -45,7 +45,7 @@ const Admin = () => {
                                     <div className="icon">
                                         <i className="fa fa-edit" />
                                     </div>
-                                    <Link to={"/proveedores"} className="small-box-footer">Ver Proveedores <i className="fas fa-arrow-circle-right" /></Link>
+                                    <Link to={"/proveedor-admin"} className="small-box-footer">Ver Proveedores <i className="fas fa-arrow-circle-right" /></Link>
                                 </div>
                             </div>
 
