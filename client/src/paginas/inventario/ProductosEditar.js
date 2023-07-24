@@ -75,7 +75,8 @@ const ProductosEditar = () => {
     proveedor,
     );
 
-    console.log(response)};
+    console.log(response)
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
