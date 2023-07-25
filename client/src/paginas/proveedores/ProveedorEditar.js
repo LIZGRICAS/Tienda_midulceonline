@@ -36,7 +36,18 @@ const ProyectosEditar = () => {
         const idProyecto = arreglo[0];
 
         const data = {
-            nombre: proyecto.nombre
+            nombre: proyecto.nombre,
+            codigo: proyecto.nombre,
+    categoria: proyecto.nombre,
+    imagen: proyecto.nombre,
+    unidadMedida: proyecto.nombre,
+    descripcion: proyecto.nombre,
+    valorCompra: proyecto.nombre,
+    valorVenta: proyecto.nombre,
+    sinRebaja: proyecto.nombre,
+    cantidad: proyecto.nombre,
+    calificacion: proyecto.nombre,
+    proveedor: proyecto.nombre
         }
 
         const response = await APIInvoke.invokePUT(`/api/proyectos/${idProyecto}`, data);

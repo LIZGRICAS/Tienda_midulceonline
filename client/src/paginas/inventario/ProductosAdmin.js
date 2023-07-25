@@ -6,7 +6,6 @@ import Navbar from "../../componentes/Navbar";
 import SidebarContainer from "../../componentes/SidebarContainer";
 import swal from "sweetalert";
 import { productosApi } from "../../apis/productosApi";
-import ProductosEditar from "./ProductosEditar";
 const ProductosAdmin = () => {
   const [productos, setProductos] = useState([]);
   const [categoriaProducto, setCategoriaProducto] = useState([
@@ -183,21 +182,21 @@ const ProductosAdmin = () => {
               <table className="table table-bordered align-self-center">
                 <thead>
                   <tr>
-                    <th style={{ width: "20%" }}>Imagen</th>
-                    <th style={{ width: "15%" }}>Nombre</th>
+                    <th style={{ width: "8%" }}>Imagen</th>
+                    <th style={{ width: "10%" }}>Nombre</th>
                     <th style={{ width: "5%" }}>Cód.</th>
                     <th style={{ width: "10%" }}>UndMedida</th>
                     <th style={{ width: "20%" }}>Descripción</th>
-                    <th style={{ width: "10%" }}>VrCompra</th>
-                    <th style={{ width: "10%" }}>VrVenta</th>
+                    <th style={{ width: "5%" }}>VrCompra</th>
+                    <th style={{ width: "5%" }}>VrVenta</th>
                     <th style={{ width: "5%" }}>Cant.</th>
-                    <th style={{ width: "10%" }}>Item</th>
+                    <th style={{ width: "5%" }}>Item</th>
                   </tr>
                 </thead>
                 <tbody>
                   {productos.map((item) => (
                     <tr key={item._id}>
-                      <td>{item.imagen}</td>
+                      <td><img src={item.imagen}  alt="img-product" className="img-BD"></img></td>
                       <td>{item.nombre}</td>
                       <td>{item.codigo}</td>
                       <td>{item.unidadMedida}</td>
@@ -208,14 +207,14 @@ const ProductosAdmin = () => {
                       <td>
                         <Link
                           to={`/productos-editar/${item._id}@${item.nombre}`}
-                          className="btn btn-sm btn-primary"
+                          className="btn btn-sm btn-primary mr-auto"
                         >
                           Editar
                         </Link>
                         &nbsp;&nbsp;
                         <button
                           onClick={(e) => eliminarProducto(e, item._id)}
-                          className="btn btn-sm btn-danger"
+                          className="btn btn-sm btn-danger mr-auto"
                         >
                           Borrar
                         </button>

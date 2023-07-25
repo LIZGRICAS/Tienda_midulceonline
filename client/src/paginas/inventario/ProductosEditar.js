@@ -8,16 +8,13 @@ import swal from "sweetalert";
 import { productosApi } from "../../apis/productosApi";
 
 const ProductosEditar = () => {
-
+const navigate = useNavigate();
   const { idproducto } = useParams();
 
   console.log(idproducto);
   let arreglo = idproducto.split("@");
   console.log(arreglo);
   const idproduct = arreglo[0];
-
-  const _id = idproduct;
-
   const [productoDetail, setProductoDetail] = useState("");
 
   const cargarProductoDetail = async () => {
@@ -59,23 +56,72 @@ const ProductosEditar = () => {
 
   const editarProducto = async () => {
 
+    let arreglo = idproducto.split('@');
+    console.log(arreglo)
+    const id = arreglo[0];
+console.log(id)
+
+    let data = {
+      nombre: productoDetail.nombre,
+      codigo: productoDetail.codigo,
+      categoria: productoDetail.categoria,
+      imagen: productoDetail.imagen,
+      unidadMedida: productoDetail.unidadMedida,
+      descripcion: productoDetail.descripcion,
+      valorCompra: productoDetail.valorCompra,
+      valorVenta: productoDetail.valorVenta,
+      sinRebaja: productoDetail.sinRebaja,
+      cantidad: productoDetail.cantidad,
+      calificacion: productoDetail.calificacion,
+      proveedor: productoDetail.proveedor
+  }
+
+  const data1 = JSON.stringify(data)
+  console.log(id, data1)
+
     const response = await productosApi.updateProduct(
-    _id,
-    nombre,
-    codigo,
-    categoria,
-    imagen,
-    unidadMedida,
-    descripcion,
-    valorCompra,
-    valorVenta,
-    sinRebaja,
-    cantidad,
-    calificacion,
-    proveedor,
+    id, data
     );
 
-    console.log(response)
+    const idProductoEditado = response._id
+
+    console.log( idProductoEditado)
+
+        if (idProductoEditado !== id) {
+            const msg = "El proyecto no fue editado correctamente.";
+            swal({
+                title: 'Error',
+                text: msg,
+                icon: 'error',
+                buttons: {
+                    confirm: {
+                        text: 'Ok',
+                        value: true,
+                        visible: true,
+                        className: 'btn btn-danger',
+                        closeModal: true
+                    }
+                }
+            });
+
+        } else {
+            navigate("/inventario");
+            const msg = "El proyecto fue editado correctamente.";
+            swal({
+                title: 'Información',
+                text: msg,
+                icon: 'success',
+                buttons: {
+                    confirm: {
+                        text: 'Ok',
+                        value: true,
+                        visible: true,
+                        className: 'btn btn-primary',
+                        closeModal: true
+                    }
+                }
+            });
+        }
   };
 
   const onSubmit = (e) => {

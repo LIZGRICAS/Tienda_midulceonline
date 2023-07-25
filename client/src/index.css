@@ -47,3 +47,7 @@ a {
   .form-group-star input[type="radio"]:checked ~ label {
     color: orange;
   }
+
+  .img-BD {
+    width: 70px;
+  }
