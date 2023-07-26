@@ -1,5 +1,4 @@
 
-https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/61a7c800-0198-4562-84a1-5dbdf5300c3c
 ﻿# Desarrollo de aplicaciones Web 💻- Tienda virtual MiDulceOnline (Venta de dulces)---MisionTic2022 🚀 
 
 <img align="right" src="https://i.ibb.co/LN0f3tb/Mision-TIC-UIS.png" width="25%" />
