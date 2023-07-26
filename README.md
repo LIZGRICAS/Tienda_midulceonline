@@ -41,3 +41,25 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 - <a href="https://lizbethgrisalescastro.atlassian.net/jira/software/projects/U2910/boards/2/backlog">Jira   </a> 📹 
 -  <a href="https://youtube.com/watch?v=0VIMADyCCNQ">Pitch Youtube</a> 
 ---
+
+<p align="center">Echa un vistazo a la funcionalidad del FrontEnd.</p>
+
+---
+| <a href="#" target="_blank">**Componente Home**</a> | <a href="#">**Componente Login**</a> | <a href="#" target="_blank">**Componente Admin Products**</a> |
+| :---: | :---: | :---: | 
+<img align='center' width="33%" src='https://i.ibb.co/SsVvwmd/carrito-1.gif'> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' width="33%" > | <img align='center' width="33%" src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
+
+<p align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</p>
+
+---
+| <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
+| :---: | :---: | 
+<img align='center' width="50%" src='https://i.ibb.co/S09z2w6/create.gif'> | <img align='center' src='https://i.ibb.co/ZNkP7Lt/read.gif' width="50%" > | 
+
+
+---
+| <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#" target="_blank">**Método DELETE - Eliminar producto**</a> |
+| :---: | :---: | 
+| <img align='center' width="50%" src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |  <img align='center' width="50%" src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
+
+
