@@ -1,3 +1,5 @@
+
+https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/61a7c800-0198-4562-84a1-5dbdf5300c3c
 ﻿# Desarrollo de aplicaciones Web 💻- Tienda virtual MiDulceOnline (Venta de dulces)---MisionTic2022 🚀 
 
 <img align="right" src="https://i.ibb.co/LN0f3tb/Mision-TIC-UIS.png" width="25%" />
@@ -34,8 +36,15 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-<img align='center'  src="https://i.ibb.co/SsVvwmd/carrito-1.gif">
 
+
+
+
+https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/3e3b4dfd-355c-4acd-a562-df68adbcee20
+
+
+
+https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/15dcc4d4-ead4-4048-bd5a-0c0a690f6f5e
 
 
 <h3 align="center">Echa un vistazo a la funcionalidad del FrontEnd y la funcionalidad del CRUD del Backend en Postman</p>
@@ -51,11 +60,10 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 
 | <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#">**Método DELETE - Eliminar producto**</a> |
 | :---: | :---: | 
-|<img align='center'  src='https://i.ibb.co/qy6jFg8/crud-1.gif'> | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' > | 
+|<img align='center'  src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/757b4b87-0d26-4131-b6b9-d58daae34f8c'> | <img align='center' src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/537418e2-21a1-4017-8c11-fab49f705038' > | 
 
 
 ---
-
 
 ## Conoce un poco más de este proyecto en los siguientes enlaces 💼: 
 - <a href="https://midulceonline.netlify.app/">Website </a> ✍🏾
