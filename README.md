@@ -34,14 +34,14 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-<p align="center">Echa un vistazo a la funcionalidad del FrontEnd.</p>
+<h3 align="center">Echa un vistazo a la funcionalidad del FrontEnd.</p>
 
 ---
-| <a href="#" target="_blank>**Componente Home**</a> | <a href="#" target="_blank>**Componente Login**</a> | <a href="#" target="_blank>**Componente Admin Products**</a> |
+| <a href="#" target="_blank">**Componente Home**</a> | <a href="#" target="_blank">**Componente Login**</a> | <a href="#" target="_blank">**Componente Admin Products**</a> |
 | :---: | :---: | :---: | 
 |<img align='center'  src='https://i.ibb.co/SsVvwmd/carrito-1.gif'> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' > | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
-
-<p align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</p>
+---
+<h3 align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</p>
 
 ---
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
@@ -53,7 +53,7 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 | <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#" target="_blank">**Método DELETE - Eliminar producto**</a> |
 | :---: | :---: | 
 | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |  <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
-
+---
 
 
 ## Conoce un poco más de este proyecto en los siguientes enlaces 💼: 
