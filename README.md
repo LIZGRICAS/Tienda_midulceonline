@@ -44,15 +44,15 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 ---
 | <a href="#" target="_blank">**Componente Home**</a> | <a href="#" target="_blank">**Componente Login**</a> | <a href="#" target="_blank">**Componente Admin Products**</a> |
 | :---: | :---: | :---: | 
-|<img align='center' width="33%"  src="https://i.ibb.co/SsVvwmd/carrito-1.gif"> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' width="33%" > | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' width="33%" > |
-  
+|<img   align='center'       src="https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/b42f67ca-8405-4184-9fe9-5d5c8c494f43" > | <img align='center' src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/c5699f94-cf25-42b8-9647-9be856e0eaa4' > | <img align='center' src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/c2caaf35-40ec-47af-aa57-302e99ca63c8' > |
+
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
 | :---: | :---: | 
 |<img align='center'  src='https://i.ibb.co/S09z2w6/create.gif'> | <img align='center' src='https://i.ibb.co/ZNkP7Lt/read.gif' > | 
 
 | <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#">**Método DELETE - Eliminar producto**</a> |
 | :---: | :---: | 
-|<img align='center' width="50%" src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/757b4b87-0d26-4131-b6b9-d58daae34f8c'> | <img align='center' width="50%" src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/537418e2-21a1-4017-8c11-fab49f705038' > | 
+|  <img align='center'      src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/757b4b87-0d26-4131-b6b9-d58daae34f8c'> | <img align='center'  src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/537418e2-21a1-4017-8c11-fab49f705038' > | 
 
 
 ---
