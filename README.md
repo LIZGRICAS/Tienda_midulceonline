@@ -54,12 +54,12 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
 | :---: | :---: | 
 |<img align='center'  src='https://i.ibb.co/S09z2w6/create.gif'> | <img align='center' src='https://i.ibb.co/ZNkP7Lt/read.gif' > | 
----
 
----
 | <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#">**Método DELETE - Eliminar producto**</a> |
 | :---: | :---: | 
-|<img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif'>  |  <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' > |
+|<img align='center'  src='https://i.ibb.co/qy6jFg8/crud-1.gif'> | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' > | 
+
+
 ---
 
 
