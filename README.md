@@ -37,7 +37,7 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 
 
 
-<h3 align="center">Echa un vistazo a la funcionalidad del FrontEnd </p>
+<h3 align="center">Echa un vistazo a la funcionalidad del FrontEnd </h3>
 
 ---
 | <a href="#" target="_blank">**Componente Home**</a> | <a href="#" target="_blank">**Componente Login**</a> | 
@@ -48,7 +48,7 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 | :---: |
 | <img align='center' src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/c2caaf35-40ec-47af-aa57-302e99ca63c8' > |
 
-<h3 align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</p>
+<h3 align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</h3>
 
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
 | :---: | :---: | 
