@@ -37,16 +37,16 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 <p align="center">Echa un vistazo a la funcionalidad del FrontEnd.</p>
 
 ---
-| <a href="#" target="_blank">**Componente Home**</a> | <a href="#">**Componente Login**</a> | <a href="#" target="_blank">**Componente Admin Products**</a> |
+| <h1>**Componente Home**</h1> | <h1>**Componente Login**</h1> | <h1>**Componente Admin Products**</h1> |
 | :---: | :---: | :---: | 
-<img align='center' width="33%" src='https://i.ibb.co/SsVvwmd/carrito-1.gif'> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' width="33%" > | <img align='center' width="33%" src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
+<img align='center'  src='https://i.ibb.co/SsVvwmd/carrito-1.gif'> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' > | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' >  |
 
 <p align="center">Echa un vistazo a la funcionalidad del CRUD del Backend en Postman</p>
 
 ---
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
 | :---: | :---: | 
-<img align='center' width="50%" src='https://i.ibb.co/S09z2w6/create.gif'> | <img align='center' src='https://i.ibb.co/ZNkP7Lt/read.gif' width="50%" > | 
+<img align='center'  src='https://i.ibb.co/S09z2w6/create.gif'> | <img align='center' src='https://i.ibb.co/ZNkP7Lt/read.gif' > | 
 
 
 ---
