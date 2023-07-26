@@ -39,21 +39,12 @@ En el diseño de la aplicación, se implementó la habilidad de leer e interpret
 
 
 
-
-https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/3e3b4dfd-355c-4acd-a562-df68adbcee20
-
-
-
-https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/15dcc4d4-ead4-4048-bd5a-0c0a690f6f5e
-
-
 <h3 align="center">Echa un vistazo a la funcionalidad del FrontEnd y la funcionalidad del CRUD del Backend en Postman</p>
 
 ---
 | <a href="#" target="_blank">**Componente Home**</a> | <a href="#" target="_blank">**Componente Login**</a> | <a href="#" target="_blank">**Componente Admin Products**</a> |
 | :---: | :---: | :---: | 
-|<img align='center'  src="https://i.ibb.co/SsVvwmd/carrito-1.gif"> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' > 
-|<img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' > |
+|<img align='center' width="33%"  src="https://i.ibb.co/SsVvwmd/carrito-1.gif"> | <img align='center' src='https://i.ibb.co/s2nYL6n/login-1.gif' width="33%" > | <img align='center' src='https://i.ibb.co/qy6jFg8/crud-1.gif' width="33%" > |
   
 | <a href="#" target="_blank">**Método POST - Crear producto**</a> | <a href="#">**Método GET - Buscar producto(s)**</a> |
 | :---: | :---: | 
@@ -61,8 +52,7 @@ https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/15dcc4d4-ead4
 
 | <a href="#" target="_blank">**Método PUT - Actualizar producto**</a> | <a href="#">**Método DELETE - Eliminar producto**</a> |
 | :---: | :---: | 
-|<img align='center'  src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/757b4b87-0d26-4131-b6b9-d58daae34f8c'> 
-| <img align='center' src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/537418e2-21a1-4017-8c11-fab49f705038' > | 
+|<img align='center' width="50%" src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/757b4b87-0d26-4131-b6b9-d58daae34f8c'> | <img align='center' width="50%" src='https://github.com/LIZGRICAS/Tienda_midulceonline/assets/102168375/537418e2-21a1-4017-8c11-fab49f705038' > | 
 
 
 ---
